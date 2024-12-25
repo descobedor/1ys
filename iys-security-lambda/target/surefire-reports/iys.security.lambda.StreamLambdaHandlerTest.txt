@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: iys.security.lambda.StreamLambdaHandlerTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.931 s -- in iys.security.lambda.StreamLambdaHandlerTest

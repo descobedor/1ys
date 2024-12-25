@@ -1,0 +1,20 @@
+-------------------------------------------------------------------------------
+Test set: iys.security.lambda.jwt.JwtHelperTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.035 s <<< FAILURE! -- in iys.security.lambda.jwt.JwtHelperTest
+iys.security.lambda.jwt.JwtHelperTest.getJsonWebToken -- Time elapsed: 0.021 s <<< ERROR!
+io.jsonwebtoken.lang.UnknownClassException: Unable to find an implementation for interface io.jsonwebtoken.io.Serializer using java.util.ServiceLoader. Ensure you include a backing implementation .jar in the classpath, for example jjwt-impl.jar, or your own .jar for custom implementations.
+	at io.jsonwebtoken.impl.lang.LegacyServices.loadFirst(LegacyServices.java:26)
+	at io.jsonwebtoken.impl.DefaultJwtBuilder.compact(DefaultJwtBuilder.java:291)
+	at iys.security.lambda.jwt.JwtHelper.generateToken(JwtHelper.kt:19)
+	at iys.security.lambda.jwt.JwtHelper.generateToken$default(JwtHelper.kt:12)
+	at iys.security.lambda.jwt.JwtHelper.getJsonWebToken(JwtHelper.kt:28)
+	at iys.security.lambda.jwt.JwtHelperTest.getJsonWebToken(JwtHelperTest.java:27)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+Caused by: io.jsonwebtoken.impl.lang.UnavailableImplementationException: Unable to find an implementation for interface io.jsonwebtoken.io.Serializer using java.util.ServiceLoader. Ensure you include a backing implementation .jar in the classpath, for example jjwt-impl.jar, or your own .jar for custom implementations.
+	at io.jsonwebtoken.impl.lang.Services.loadFirst(Services.java:105)
+	at io.jsonwebtoken.impl.lang.LegacyServices.loadFirst(LegacyServices.java:24)
+	... 8 more
+

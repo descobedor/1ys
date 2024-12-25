@@ -1,0 +1,14 @@
+server:
+  port: 8080
+spring:
+  #  jpa:
+  #    show-sql: true
+  application:
+    name: iys-customer-employee-interactions
+  datasource:
+    url: jdbc:h2:mem:testdb
+    username: sa
+    password:
+  h2:
+    console:
+      enabled: true
